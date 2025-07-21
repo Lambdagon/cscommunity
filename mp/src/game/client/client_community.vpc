@@ -30,7 +30,8 @@ $Project "Client"
 	$Folder	"Source Files"
 	{
 		-$File	"$SRCDIR\game\shared\weapon_parse_default.cpp"
-		
+		$File	"$SRCDIR\game\shared\vis\gamemounter.cpp"
+		$File	"$SRCDIR\game\shared\vis\gamemounter.h"
 		$File	"c_team_objectiveresource.cpp"
 		$File	"c_team_objectiveresource.h"
 		$File	"hud_base_account.cpp"

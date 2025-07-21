@@ -29,6 +29,8 @@ $Project "Server"
 {
 	$Folder	"Source Files"
 	{
+		$File	"$SRCDIR\game\shared\vis\gamemounter.cpp"
+		$File	"$SRCDIR\game\shared\vis\gamemounter.h"
 		$File	"Func_Monitor.cpp"
 		$File	"h_cycler.cpp"
 		$File	"h_cycler.h"

@@ -1116,7 +1116,7 @@ ConVar cl_autohelp(
 	//-----------------------------------------------------------------------------
 	void CCSGameRules::DeathNotice( CBasePlayer *pVictim, const CTakeDamageInfo &info )
 	{
-#if SBTERROR
+#ifdef SBTERROR
 		// Don't spam killfeed. Will help with lots of bots.
 		if (m_bIsTerrorStrike && pVictim->GetTeamNumber() == TEAM_CT)
 			return;
@@ -3128,7 +3128,7 @@ ConVar cl_autohelp(
 
 	void CCSGameRules::CheckRoundTimeExpired()
 	{
-#if SBTERROR
+#ifdef SBTERROR
 		if (m_bIsTerrorStrike || GetRoundRemainingTime() > 0 || m_iRoundWinStatus != WINNER_NONE)
 			return; //We haven't completed other objectives, so go for this!.
 #else
@@ -3456,7 +3456,7 @@ ConVar cl_autohelp(
 		if ( targetTeam != TEAM_TERRORIST && targetTeam != TEAM_CT )
 			return;
 
-#if SBTERROR
+#ifdef SBTERROR
 		// Keep humans as survivors.
 		if (m_bIsTerrorStrike)
 			targetTeam = TEAM_TERRORIST;
@@ -3471,7 +3471,7 @@ ConVar cl_autohelp(
 
 	void CCSGameRules::BalanceTeams( void )
 	{
-#if SBTERROR
+#ifdef SBTERROR
 		// Don't try to do autobalance on a gamemode designed to be unbalanced lol
 		if (m_bIsTerrorStrike)
 			return;
@@ -5226,7 +5226,7 @@ void CreateBlackMarketString( void )
 
 int CCSGameRules::GetStartMoney( void )
 {
-#if SBTERROR
+#ifdef SBTERROR
 	if (m_bIsTerrorStrike)
 		return 30000;
 #endif
