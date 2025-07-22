@@ -4058,7 +4058,7 @@ ConVar cl_autohelp(
 		if (mapnameLength >= prefixLength && strncmp(mapname, prefix, prefixLength) == 0)
 		{
 			// Check if terror strike map.
-			Msg("This map is a terror strike map. This will change game behaviour. If you do not want this dont start the map name with zombie_!!!\r\n");
+			// Msg("This map is a terror strike map. This will change game behaviour. If you do not want this dont start the map name with zombie_!!!\r\n");
 			m_bIsTerrorStrike = true;
 
 			//UTIL_ShowMessage();
