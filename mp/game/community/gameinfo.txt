@@ -1,20 +1,19 @@
 "GameInfo"
 {
-	game	"Terror-Strike Source: Debug"
-	title	"COUNTER-STRIKE'"
-	title2	"source"
-	type multiplayer_only
-	nomodels 1
-	nohimodel 1
-	nocrosshair 0
-	advcrosshair 3
-	bots 1
+	game		"Terror-Strike Source"
+	title		"TERROR-STRIKE'"
+	title2		"source"
+	GameData	"community.fgd"
+	type 		multiplayer_only
+	nomodels 	1
+	nohimodel 	1
+	nocrosshair 	0
+	advcrosshair 	3
+	bots 		1
 	hidden_maps
 	{
 		"test_speakers"		1
 		"test_hardware"		1
-		"zombie_dev_spawntest" 1
-		"zombie_dev_luatest" 1
 	}
 	nodegraph 0
 

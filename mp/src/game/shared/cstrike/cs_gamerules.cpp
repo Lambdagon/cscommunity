@@ -1,4 +1,4 @@
-//========= Copyright � 1996-2005, Valve Corporation, All rights reserved. ============//
+﻿//========= Copyright © 1996-2005, Valve Corporation, All rights reserved. ============//
 //
 // Purpose: The TF Game rules 
 //
@@ -4046,7 +4046,10 @@ ConVar cl_autohelp(
 		}
 
 #ifdef SBTERROR
-		const char *prefix = "maps/zombie_";
+		const char *prefix = "maps/";
+		// This originally was "maps/zombie_", but we want to allow all map names to do SBTerror shit. 
+		// If you don't want the funny L4D zambie mode why the hell are you using this mod?
+		// this WILL cause issues on stock unedited CS maps tho... ¯\_(ツ)_/¯
 		const char *mapname = MapName();
 
 		size_t prefixLength = strlen(prefix);
@@ -4055,7 +4058,7 @@ ConVar cl_autohelp(
 		if (mapnameLength >= prefixLength && strncmp(mapname, prefix, prefixLength) == 0)
 		{
 			// Check if terror strike map.
-			Msg("This map is a terror strike map. This will change game behaviour. If you do not want this dont start the map name with zombie_!!!\r\n");
+			// Msg("This map is a terror strike map. This will change game behaviour. If you do not want this dont start the map name with zombie_!!!\r\n");
 			m_bIsTerrorStrike = true;
 
 			//UTIL_ShowMessage();
